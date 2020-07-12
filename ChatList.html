@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>Chat List</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="ChatList1.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    <div class="container">
+    <nav class="navbar navbar-dark bg-blue">
+        <div class="default_profile">
+            <img class="default_profile_img" src="./images/default.png" data-toggle="modal" data-target="#profile">
+            <div class="modal fade" id="profile" tabindex="-1" role="dialog" aria-labelledby="profileModal" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Edit Profile</h5>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="form-group">
+                          <label for="recipient-name" class="col-form-label">Name</label>
+                          <input type="text" class="form-control" id="recipient-name" value="anitha">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Email ID</label>
+                            <input type="text" class="form-control" id="recipient-name" value="anitha@gmail.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Username</label>
+                            <input type="text" class="form-control" id="recipient-name" value="anitha@123">
+                        </div>
+                        <div class="form-group">
+                          <label for="message-text" class="col-form-label">DOB:</label>
+                          <input type="date" class="form-control" id="recipient-name" value="anitha">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Gender</label>
+                            <select class="form-control" id="recipient-name">
+                            <option>---</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Password</label>
+                            <input type="password" class="form-control" id="recipient-name" value="anitha">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="recipient-name" value="anitha">
+                        </div>
+                        <div class="form-group">
+                          <label for="recipient-name" class="col-form-label">Country</label>
+                          <select class="form-control" id="recipient-name">
+                            <option>---</option>
+                            <option>Argentina</option>
+                            <option>Australia</option>
+                            <option>Botswana</option>
+                            <option>Canada</option>
+                            <option>Denmark</option>
+                            <option>USA</option>
+                            <option>UAE</option>
+                            <option>India</option>
+                            <option>Egypt</option>
+                            <option>Finland</option>
+                            <option>Georgia</option>
+                            <option>Ireland</option>
+                            <option>Jordan</option>
+                            <option>Lebanon</option>
+                          </select>
+                      </div>
+                      <div class="form-group">
+                      <label for="basic-no">Mobile Number</label>
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon3">+971</span>
+                          </div>
+                          <input type="number" class="form-control" id="basic-no" aria-describedby="basic-addon3">
+                        </div>
+                      </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Location</label>
+                            <input type="text" class="form-control" id="recipient-name" value="Abu Dhabi">
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">update</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="chatapp_hd">
+            <a class="navbar-brand mr-lg-0" href="#">ChatApp</a>
+        </div>
+        <div>
+            <div class="navbar-toggler navbar-search" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                    <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                  </svg>
+              </div>
+        </div>
+    <div class="navbar-collapse collapse" id="navbarSupportedContent">
+        <form class="form-inline my-lg-0">
+        <input class="search" type="text" placeholder="Search" aria-label="Search">
+        </form>
+    </div>
+    
+    </nav>
+
+<div class="tabs">
+    <div class="nav" id="nav-tab" role="tablist">
+      <a class="nav-item nav-link active" id="active-list-tab" data-toggle="tab" href="#active-list" role="tab" aria-controls="active-list" aria-selected="true">Active List</a>
+      <a class="nav-item nav-link" id="chat-tab" data-toggle="tab" href="#chat" role="tab" aria-controls="chat" aria-selected="false">Chat</a>
+      <a class="nav-item nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+    </div>
+  </div>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="active-list" role="tabpanel" aria-labelledby="active-list-tab">
+            <div class="bg-white rounded shadow-sm">
+            <ul>
+              <li class="media text-muted">
+                <img src="./images/40-gr-B4BjJwUNhS.jpg" class="mr-2 rounded" width="40" height="40"/>
+                <p class="media-body mb-0 small lh-125">
+                  <strong class="d-block text-gray-dark">Liam</strong>
+                  4 members
+                </p>
+              </li>
+              <li class="media text-muted">
+                <img src="./images/37-gr-SaQ5PG3haj.jpg" class="mr-2 rounded" width="40" height="40"/>
+                <p class="media-body mb-0 small lh-125">
+                  <strong class="d-block text-gray-dark">William</strong>
+                  2 members
+                </p>
+              </li>
+              <li class="media text-muted">
+                <img src="./images/49-gr-nwJdqAAlbe.jpg" class="mr-2 rounded" width="40" height="40"/>
+                <p class="media-body mb-0 small lh-125">
+                  <strong class="d-block text-gray-dark">Jonathan</strong>
+                  1 members
+                </p>
+              </li>
+              <li class="media text-muted">
+                <img src="./images/43-gr-jjTkNfuFq3.jpg" class="mr-2 rounded" width="40" height="40"/>
+                <p class="media-body mb-0 small lh-125">
+                  <strong class="d-block text-gray-dark">Samuel</strong>
+                  5 members
+                </p>
+              </li>
+              <li class="media text-muted">
+                <img src="./images/46-gr-GSjOALoiIA.jpg" class="mr-2 rounded" width="40" height="40"/>
+                <p class="media-body mb-0 small lh-125">
+                  <strong class="d-block text-gray-dark">Maverick</strong>
+                  3 members
+                </p>
+              </li>
+              <li class="media text-muted">
+                <img src="./images/52-gr-tbvVH5uz4N.jpg" class="mr-2 rounded" width="40" height="40"/>
+                <p class="media-body mb-0 small lh-125">
+                  <strong class="d-block text-gray-dark">Brayden</strong>
+                  4 members
+                </p>
+              </li>
+              <li class="media text-muted">
+                <img src="./images/55-gr-gjEXqxspHF.jpg" class="mr-2 rounded" width="40" height="40"/>
+                <p class="media-body mb-0 small lh-125">
+                  <strong class="d-block text-gray-dark">Mateo</strong>
+                  2 members
+                </p>
+              </li>
+              <li class="media text-muted">
+                <img src="./images/58-gr-m7KwggJJhY.jpg" class="mr-2 rounded" width="40" height="40"/>
+                <p class="media-body mb-0 small lh-125">
+                  <strong class="d-block text-gray-dark">Jaxon</strong>
+                  4 members
+                </p>
+              </li>
+              <li class="media text-muted">
+                <img src="./images/61-gr-o3kubvSclp.jpg" class="mr-2 rounded" width="40" height="40"/>
+                <p class="media-body mb-0 small lh-125">
+                  <strong class="d-block text-gray-dark">Jameson</strong>
+                  4 members
+                </p>
+              </li>
+              <li class="media text-muted">
+                <img src="./images/40-gr-B4BjJwUNhS.jpg" class="mr-2 rounded" width="40" height="40"/>
+                <p class="media-body mb-0 small lh-125">
+                  <strong class="d-block text-gray-dark">Kayden</strong>
+                  4 members
+                </p>
+              </li>
+              <li class="media text-muted">
+                <img src="./images/37-gr-SaQ5PG3haj.jpg" class="mr-2 rounded" width="40" height="40"/>
+                <p class="media-body mb-0 small lh-125">
+                  <strong class="d-block text-gray-dark">Everett</strong>
+                  4 members
+                </p>
+              </li>
+            </ul> 
+            </div>
+    </div>
+    <div class="tab-pane fade" id="chat" role="tabpanel" aria-labelledby="chat-tab">
+        <div class="bg-white rounded shadow-sm">
+            <ul>
+                <li class="media text-muted">
+                  <img src="./images/46-gr-GSjOALoiIA.jpg" class="mr-2 rounded" width="40" height="40"/>
+                  <p class="media-body mb-0 small lh-125">
+                    <strong class="d-block text-gray-dark">Maverick</strong>
+                    3 members
+                  </p>
+                </li>
+                <li class="media text-muted">
+                  <img src="./images/52-gr-tbvVH5uz4N.jpg" class="mr-2 rounded" width="40" height="40"/>
+                  <p class="media-body mb-0 small lh-125">
+                    <strong class="d-block text-gray-dark">Brayden</strong>
+                    4 members
+                  </p>
+                </li>
+                <li class="media text-muted">
+                  <img src="./images/55-gr-gjEXqxspHF.jpg" class="mr-2 rounded" width="40" height="40"/>
+                  <p class="media-body mb-0 small lh-125">
+                    <strong class="d-block text-gray-dark">Mateo</strong>
+                    2 members
+                  </p>
+                </li>
+                <li class="media text-muted">
+                  <img src="./images/58-gr-m7KwggJJhY.jpg" class="mr-2 rounded" width="40" height="40"/>
+                  <p class="media-body mb-0 small lh-125">
+                    <strong class="d-block text-gray-dark">Jaxon</strong>
+                    4 members
+                  </p>
+                </li>
+                <li class="media text-muted">
+                  <img src="./images/61-gr-o3kubvSclp.jpg" class="mr-2 rounded" width="40" height="40"/>
+                  <p class="media-body mb-0 small lh-125">
+                    <strong class="d-block text-gray-dark">Jameson</strong>
+                    4 members
+                  </p>
+                </li>
+                <li class="media text-muted">
+                  <img src="./images/40-gr-B4BjJwUNhS.jpg" class="mr-2 rounded" width="40" height="40"/>
+                  <p class="media-body mb-0 small lh-125">
+                    <strong class="d-block text-gray-dark">Kayden</strong>
+                    4 members
+                  </p>
+                </li>
+                <li class="media text-muted">
+                  <img src="./images/37-gr-SaQ5PG3haj.jpg" class="mr-2 rounded" width="40" height="40"/>
+                  <p class="media-body mb-0 small lh-125">
+                    <strong class="d-block text-gray-dark">Everett</strong>
+                    4 members
+                  </p>
+                </li>
+                <li class="media text-muted">
+                    <img src="./images/40-gr-B4BjJwUNhS.jpg" class="mr-2 rounded" width="40" height="40"/>
+                    <p class="media-body mb-0 small lh-125">
+                      <strong class="d-block text-gray-dark">Liam</strong>
+                      4 members
+                    </p>
+                  </li>
+                  <li class="media text-muted">
+                    <img src="./images/37-gr-SaQ5PG3haj.jpg" class="mr-2 rounded" width="40" height="40"/>
+                    <p class="media-body mb-0 small lh-125">
+                      <strong class="d-block text-gray-dark">William</strong>
+                      2 members
+                    </p>
+                  </li>
+                  <li class="media text-muted">
+                    <img src="./images/49-gr-nwJdqAAlbe.jpg" class="mr-2 rounded" width="40" height="40"/>
+                    <p class="media-body mb-0 small lh-125">
+                      <strong class="d-block text-gray-dark">Jonathan</strong>
+                      1 members
+                    </p>
+                  </li>
+                  <li class="media text-muted">
+                    <img src="./images/43-gr-jjTkNfuFq3.jpg" class="mr-2 rounded" width="40" height="40"/>
+                    <p class="media-body mb-0 small lh-125">
+                      <strong class="d-block text-gray-dark">Samuel</strong>
+                      5 members
+                    </p>
+                  </li>
+              </ul>             
+            </div>
+    </div>
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+        <div class="bg-white rounded shadow-sm">
+        <ul>
+            <li class="media text-muted">
+              <img src="./images/40-gr-B4BjJwUNhS.jpg" class="mr-2 rounded" width="40" height="40"/>
+              <p class="media-body mb-0 small lh-125">
+                <strong class="d-block text-gray-dark">Liam</strong>
+                4 members
+              </p>
+            </li>
+            <li class="media text-muted">
+              <img src="./images/37-gr-SaQ5PG3haj.jpg" class="mr-2 rounded" width="40" height="40"/>
+              <p class="media-body mb-0 small lh-125">
+                <strong class="d-block text-gray-dark">William</strong>
+                2 members
+              </p>
+            </li>
+            <li class="media text-muted">
+              <img src="./images/49-gr-nwJdqAAlbe.jpg" class="mr-2 rounded" width="40" height="40"/>
+              <p class="media-body mb-0 small lh-125">
+                <strong class="d-block text-gray-dark">Jonathan</strong>
+                1 members
+              </p>
+            </li>
+            <li class="media text-muted">
+              <img src="./images/43-gr-jjTkNfuFq3.jpg" class="mr-2 rounded" width="40" height="40"/>
+              <p class="media-body mb-0 small lh-125">
+                <strong class="d-block text-gray-dark">Samuel</strong>
+                5 members
+              </p>
+            </li>
+            <li class="media text-muted">
+              <img src="./images/46-gr-GSjOALoiIA.jpg" class="mr-2 rounded" width="40" height="40"/>
+              <p class="media-body mb-0 small lh-125">
+                <strong class="d-block text-gray-dark">Maverick</strong>
+                3 members
+              </p>
+            </li>
+            <li class="media text-muted">
+              <img src="./images/52-gr-tbvVH5uz4N.jpg" class="mr-2 rounded" width="40" height="40"/>
+              <p class="media-body mb-0 small lh-125">
+                <strong class="d-block text-gray-dark">Brayden</strong>
+                4 members
+              </p>
+            </li>
+            <li class="media text-muted">
+              <img src="./images/55-gr-gjEXqxspHF.jpg" class="mr-2 rounded" width="40" height="40"/>
+              <p class="media-body mb-0 small lh-125">
+                <strong class="d-block text-gray-dark">Mateo</strong>
+                2 members
+              </p>
+            </li>
+            <li class="media text-muted">
+              <img src="./images/58-gr-m7KwggJJhY.jpg" class="mr-2 rounded" width="40" height="40"/>
+              <p class="media-body mb-0 small lh-125">
+                <strong class="d-block text-gray-dark">Jaxon</strong>
+                4 members
+              </p>
+            </li>
+            <li class="media text-muted">
+              <img src="./images/61-gr-o3kubvSclp.jpg" class="mr-2 rounded" width="40" height="40"/>
+              <p class="media-body mb-0 small lh-125">
+                <strong class="d-block text-gray-dark">Jameson</strong>
+                4 members
+              </p>
+            </li>
+            <li class="media text-muted">
+              <img src="./images/40-gr-B4BjJwUNhS.jpg" class="mr-2 rounded" width="40" height="40"/>
+              <p class="media-body mb-0 small lh-125">
+                <strong class="d-block text-gray-dark">Kayden</strong>
+                4 members
+              </p>
+            </li>
+            <li class="media text-muted">
+              <img src="./images/37-gr-SaQ5PG3haj.jpg" class="mr-2 rounded" width="40" height="40"/>
+              <p class="media-body mb-0 small lh-125">
+                <strong class="d-block text-gray-dark">Everett</strong>
+                4 members
+              </p>
+            </li>
+          </ul>
+        </div>  
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+        <script src="ChatList.js"></script></body>
+</html>
